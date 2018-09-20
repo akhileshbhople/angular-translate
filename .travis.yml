@@ -1,4 +1,3 @@
-os: linux-ppc64le
 sudo: false
 language: node_js
 node_js:
