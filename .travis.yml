@@ -14,39 +14,25 @@ matrix:
   include:
   - os: linux-ppc64le
     script: npm install
-    env: TEST_SCOPE=
-  - os: linux-ppc64le
-    script: npm install
-    env: TEST_SCOPE=angular_1.2.x
-  - os: linux-ppc64le
-    script: npm install
-    env: TEST_SCOPE=angular_1.3.x
-  - os: linux-ppc64le
-    script: npm install
-    env: TEST_SCOPE=angular_1.4.x
-  - os: linux-ppc64le
-    script: npm install
-    env: TEST_SCOPE=angular_1.5.x
-  - os: linux-ppc64le
-    script: npm install
-    env: TEST_SCOPE=angular_1.6.x
-  - os: linux-ppc64le
-    script: npm install
-    env: TEST_SCOPE=angular_1.7.x
+    env: 
+      include:
+      - TEST_SCOPE=
+      - TEST_SCOPE=angular_1.2.x
+      - TEST_SCOPE=angular_1.3.x
+      - TEST_SCOPE=angular_1.4.x
+      - TEST_SCOPE=angular_1.5.x
+      - TEST_SCOPE=angular_1.6.x
+      - TEST_SCOPE=angular_1.7.x
   - os: linux
-    env: TEST_SCOPE=
-  - os: linux
-    env: TEST_SCOPE=angular_1.2.x
-  - os: linux
-    env: TEST_SCOPE=angular_1.3.x
-  - os: linux
-    env: TEST_SCOPE=angular_1.4.x
-  - os: linux
-    env: TEST_SCOPE=angular_1.5.x
-  - os: linux
-    env: TEST_SCOPE=angular_1.6.x
-  - os: linux
-    env: TEST_SCOPE=angular_1.7.x
+    env:
+      include:
+      - TEST_SCOPE=
+      - TEST_SCOPE=angular_1.2.x
+      - TEST_SCOPE=angular_1.3.x
+      - TEST_SCOPE=angular_1.4.x
+      - TEST_SCOPE=angular_1.5.x
+      - TEST_SCOPE=angular_1.6.x
+      - TEST_SCOPE=angular_1.7.x
 
 before_script:
   - export DISPLAY=:99.0
