@@ -1,4 +1,3 @@
-os: linux-ppc64le
 sudo: false
 language: node_js
 node_js:
@@ -11,8 +10,11 @@ addons:
 before_install:
   - npm install -qg grunt-cli karma-cli codeclimate-test-reporter
 
-script:
-  - npm install
+matrix:
+  include:
+  - os: linux-ppc64le
+    script: npm install
+  - os: linux
 
 before_script:
   - export DISPLAY=:99.0
